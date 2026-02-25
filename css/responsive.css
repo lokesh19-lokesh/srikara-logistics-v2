@@ -13,9 +13,9 @@
     }
 
     .hero_area {
-        background: none;
+        background-image: none;
+        background-color: #005555;
         height: auto;
-
     }
 
 
@@ -44,12 +44,8 @@
     }
 
     .slider_section {
-        background-image: url(../images/slidrer-bg.jpg);
-        background-repeat: no-repeat;
-
-        background-size: cover;
-
-        background-position: top;
+        background-image: none;
+        background-color: #005555;
     }
 
     .slider_item-detail {
