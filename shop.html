@@ -28,139 +28,54 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
-  <div class="hero_area custom_page-height">
-    <!-- header section strats -->
-    <section class="header_section">
+  <!-- header section -->
+  <header class="header_section">
+    <div class="header_topbar">
       <div class="container">
-        <nav class="navbar navbar-expand-lg custom_nav-container d-lg-none">
-          <a class="navbar-brand" href="#">
-            <div class="logo-box">
-              <img src="newimages/logo.png" alt="">
-            </div>
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav  ">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html"> About </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="service.html"> Service</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="shop.html"> Shop </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="company.html"> Company </a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link " href="contact.html">Contact us</a>
-              </li>
-            </ul>
+        <div class="topbar_inner">
+          <div class="topbar_contact">
+            <a href="tel:8897925656"><i class="fa fa-phone"></i> 8897925656 | 7799701666</a>
+            <a href="mailto:srikaralogistics02@gmail.com"><i class="fa fa-envelope"></i>
+              srikaralogistics02@gmail.com</a>
           </div>
-        </nav>
-        <div class="header_container ">
-          <div class="logo-box">
-            <img src="newimages/logo.png" alt="">
-          </div>
-          <div>
-            <div class="header_top">
-              <div class="header_top-contact">
-
-                <a href="" class="ml-4">
-                  <div>
-                    <img src="images/phone.png" alt="" />
-                  </div>
-                  <span>
-                    (+71) 258964785
-                  </span>
-                </a>
-                <a href="" class="ml-4">
-                  <div>
-                    <img src="images/mail.png" alt="" />
-                  </div>
-                  <span>
-                    transportz@gmail.com
-                  </span>
-                </a>
-              </div>
-              <div class="header_top-social">
-                <div>
-                  <a href="">
-                    <img src="images/fb.png" alt="">
-                  </a>
-                </div>
-                <div>
-                  <a href="">
-                    <img src="images/twitter.png" alt="">
-                  </a>
-                </div>
-                <div>
-                  <a href="">
-                    <img src="images/g-plus.png" alt="">
-                  </a>
-                </div>
-                <div>
-                  <a href="">
-                    <img src="images/linkedin.png" alt="">
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="header_btm">
-              <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
-
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                  aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
-                    <ul class="navbar-nav  ">
-                      <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="about.html"> About </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="service.html"> Service</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="shop.html"> Shop </a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="company.html"> Company </a>
-                      </li>
-                      <li class="nav-item ">
-                        <a class="nav-link pr-0" href="contact.html">Contact us</a>
-                      </li>
-                    </ul>
-
-                  </div>
-
-                </div>
-              </nav>
-            </div>
+          <div class="topbar_social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
       </div>
-    </section>
-    <!-- end header section -->
-
-  </div>
+    </div>
+    <nav class="navbar navbar-expand-lg main_navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="newimages/logo.png" alt="Srikara Logistics" class="nav_logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar"
+          aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+            <li class="nav-item active"><a class="nav-link" href="shop.html">Fleet</a></li>
+            <li class="nav-item"><a class="nav-link" href="company.html">Operations</a></li>
+            <li class="nav-item"><a class="nav-link nav-cta" href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- end header section -->
 
 
 
