@@ -428,8 +428,16 @@ a:focus {
 
 .slider_item-detail h1 {
   font-weight: bold;
-  margin: 35px 0;
+  margin: 35px 0 15px 0;
   color: #000002;
+}
+
+.slider_item-detail p {
+  color: #000000;
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 90%;
 }
 
 .read-btn,
