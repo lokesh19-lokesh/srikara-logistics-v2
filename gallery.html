@@ -8,8 +8,8 @@
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- Site Metas -->
-    <meta name="keywords" content="srikara logistics, gallery, fleet, transportation" />
-    <meta name="description" content="Gallery - Srikara Logistics fleet and operations in action." />
+    <meta name="keywords" content="srikara logistics, gallery, fleet, transportation, hyderabad" />
+    <meta name="description" content="Explore Srikara Logistics' premium fleet and operations through our gallery." />
     <meta name="author" content="" />
 
     <title>Srikara Logistics | Gallery</title>
@@ -32,115 +32,271 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
     <style>
-        /* Gallery Page Styles */
-        .gallery_section {
-            padding: 80px 0 60px;
+        /* Modern Gallery Styles */
+        .gallery-hero {
+            padding: 80px 0 40px;
+            text-align: center;
+            background: #f8fcfc;
         }
 
-        .gallery_section .heading_style {
+        .gallery-hero h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #005555;
+            margin-bottom: 10px;
+        }
+
+        .gallery-hero p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
             margin-bottom: 40px;
+            flex-wrap: wrap;
+            padding: 0 15px;
         }
 
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+        .filter-btn {
+            padding: 8px 24px;
+            border-radius: 50px;
+            border: 2px solid #005555;
+            background: transparent;
+            color: #005555;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            outline: none;
         }
 
-        .gallery-item {
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #005555;
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 85, 85, 0.2);
+        }
+
+        .gallery-grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -10px;
+            transition: all 0.5s ease;
+        }
+
+        .gallery-card-wrapper {
+            width: 33.333%;
+            padding: 10px;
+            box-sizing: border-box;
+            transition: transform 0.4s ease, opacity 0.4s ease;
+        }
+
+        .gallery-card-wrapper.hide {
+            display: none;
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        .gallery-card {
             position: relative;
             overflow: hidden;
-            border-radius: 10px;
-            cursor: pointer;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             aspect-ratio: 4/3;
+            cursor: pointer;
+            background: #eee;
         }
 
-        .gallery-item img {
+        .gallery-card img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 56, 56, 0.9) 0%, rgba(0, 85, 85, 0.4) 50%, transparent 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 25px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .gallery-card:hover .gallery-card-overlay {
+            opacity: 1;
+        }
+
+        .gallery-card-overlay h4 {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 0 4px;
+            transform: translateY(15px);
             transition: transform 0.4s ease;
         }
 
-        .gallery-item:hover img {
-            transform: scale(1.08);
+        .gallery-card-overlay span {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transform: translateY(15px);
+            transition: transform 0.4s ease 0.05s;
         }
 
-        .gallery-item .gallery-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0, 85, 85, 0.85));
-            color: #fff;
-            padding: 20px 15px 15px;
-            transform: translateY(100%);
-            transition: transform 0.35s ease;
-        }
-
-        .gallery-item:hover .gallery-overlay {
+        .gallery-card:hover .gallery-card-overlay h4,
+        .gallery-card:hover .gallery-card-overlay span {
             transform: translateY(0);
         }
 
-        .gallery-overlay h5 {
-            font-size: 16px;
-            font-weight: 600;
-            margin: 0;
-        }
-
-        /* Lightbox */
-        .gallery-lightbox {
+        /* Enhanced Lightbox */
+        .premium-lightbox {
             display: none;
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 20, 20, 0.95);
+            backdrop-filter: blur(8px);
             z-index: 9999;
             align-items: center;
             justify-content: center;
+            padding: 40px;
         }
 
-        .gallery-lightbox.active {
+        .premium-lightbox.active {
             display: flex;
         }
 
-        .gallery-lightbox img {
-            max-width: 90%;
-            max-height: 85vh;
-            border-radius: 8px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        .lightbox-content {
+            position: relative;
+            max-width: 1000px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .gallery-lightbox .close-btn {
+        .lightbox-img-wrapper {
+            position: relative;
+            width: 100%;
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .premium-lightbox img {
+            width: 100%;
+            height: auto;
+            max-height: 80vh;
+            object-fit: contain;
+            display: block;
+        }
+
+        .lightbox-close {
             position: absolute;
-            top: 20px;
-            right: 30px;
-            font-size: 36px;
+            top: -50px;
+            right: 0;
             color: #fff;
+            font-size: 32px;
             cursor: pointer;
-            line-height: 1;
-            z-index: 10000;
+            transition: color 0.3s;
         }
 
-        .gallery-lightbox .close-btn:hover {
+        .lightbox-close:hover {
             color: #007FFF;
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 12px;
-            }
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            width: calc(100% + 120px);
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
 
-            .gallery_section {
-                padding: 50px 0 40px;
+        .nav-btn {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            pointer-events: auto;
+            transition: all 0.3s;
+        }
+
+        .nav-btn:hover {
+            background: #007FFF;
+            border-color: #007FFF;
+            transform: scale(1.1);
+        }
+
+        .lightbox-caption {
+            margin-top: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .lightbox-caption h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .lightbox-caption p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Responsive adaptations */
+        @media (max-width: 1200px) {
+            .lightbox-nav {
+                width: 100%;
+                padding: 0 20px;
+                top: auto;
+                bottom: -80px;
+                transform: none;
             }
         }
 
-        @media (max-width: 480px) {
-            .gallery-grid {
-                grid-template-columns: 1fr;
-                gap: 15px;
+        @media (max-width: 992px) {
+            .gallery-card-wrapper {
+                width: 50%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .gallery-card-wrapper {
+                width: 100%;
+            }
+
+            .gallery-hero h2 {
+                font-size: 28px;
+            }
+
+            .premium-lightbox {
+                padding: 20px;
             }
         }
     </style>
@@ -149,8 +305,6 @@
 <body>
     <!-- header section -->
     <header class="header_section">
-
-        <!-- Top Bar -->
         <div class="header_topbar">
             <div class="container">
                 <div class="topbar_inner">
@@ -175,10 +329,10 @@
             </div>
         </div>
 
-        <nav class="navbar navbar-expand-lg custom_nav-container">
+        <nav class="navbar navbar-expand-lg main_navbar">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
-                    <img src="newimages/logo.png" alt="Srikara Logistics Logo" style="max-height: 50px;">
+                    <img src="newimages/logo.png" alt="Srikara Logistics" class="nav_logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar"
                     aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -195,123 +349,246 @@
                 </div>
             </div>
         </nav>
-
     </header>
     <!-- end header section -->
 
-
-    <!-- gallery section -->
-    <section class="gallery_section">
+    <!-- Gallery Hero -->
+    <section class="gallery-hero">
         <div class="container">
-            <div class="text-center">
-                <h2 class="heading_style">
-                    Our Gallery
-                </h2>
-            </div>
-
-            <div class="gallery-grid">
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="newimages/hero1.png" alt="Srikara Logistics Fleet Vehicle">
-                    <div class="gallery-overlay">
-                        <h5>Our Premium Fleet</h5>
-                    </div>
-                </div>
-
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="newimages/hero2.png" alt="Employee Transportation Service">
-                    <div class="gallery-overlay">
-                        <h5>Employee Transport</h5>
-                    </div>
-                </div>
-
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="newimages/hero3.png" alt="Car Rental Services">
-                    <div class="gallery-overlay">
-                        <h5>Car Rentals</h5>
-                    </div>
-                </div>
-
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="newimages/hero4.png" alt="Tours and Travels">
-                    <div class="gallery-overlay">
-                        <h5>Tours &amp; Travels</h5>
-                    </div>
-                </div>
-
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="newimages/employeetransportation.png" alt="Employee Transportation Fleet">
-                    <div class="gallery-overlay">
-                        <h5>Corporate Transport</h5>
-                    </div>
-                </div>
-
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="newimages/carrental.png" alt="Car Rental Fleet">
-                    <div class="gallery-overlay">
-                        <h5>Rental Vehicles</h5>
-                    </div>
-                </div>
-
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="newimages/tour&travels.png" alt="Tour and Travel Services">
-                    <div class="gallery-overlay">
-                        <h5>Travel Experiences</h5>
-                    </div>
-                </div>
-
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="newimages/about.png" alt="Srikara Logistics Office">
-                    <div class="gallery-overlay">
-                        <h5>About Srikara</h5>
-                    </div>
-                </div>
-
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="newimages/operationprocedure.png" alt="Operations Procedure">
-                    <div class="gallery-overlay">
-                        <h5>Our Operations</h5>
-                    </div>
-                </div>
-            </div>
-
+            <h2 class="heading_style">Our Visual Journey</h2>
+            <p>Take a look at our specialized fleet and dedicated operations that keep Hyderabad moving.</p>
         </div>
     </section>
-    <!-- end gallery section -->
 
-
-    <!-- info section -->
-    <section class="info_section layout_padding">
+    <!-- Gallery Section -->
+    <section class="layout_padding-bottom" style="background: #f8fcfc;">
         <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="info_social">
-                        <div class="logo-box">
-                            <img src="newimages/logo.png" alt="Srikara Logistics" style="max-width: 120px;">
+
+            <!-- Category Filters -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All Photos</button>
+                <button class="filter-btn" data-filter="fleet">Our Fleet</button>
+                <button class="filter-btn" data-filter="employee">Employee Transport</button>
+                <button class="filter-btn" data-filter="rental">Car Rental</button>
+                <button class="filter-btn" data-filter="tours">Tours & Travels</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid-container" id="galleryGrid">
+
+                <!-- 1. Fleet -->
+                <div class="gallery-card-wrapper" data-category="fleet">
+                    <div class="gallery-card" onclick="openPremiumLightbox(0)">
+                        <img src="newimages/hero1.png" alt="Premium Fleet Vehicle">
+                        <div class="gallery-card-overlay">
+                            <span>Our Fleet</span>
+                            <h4>Premium Sedan Services</h4>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 info_news">
-                    <h5>Quick Links</h5>
-                    <ul style="list-style: none; padding: 0;">
-                        <li><a href="index.html" style="color: #fff;">Home</a></li>
-                        <li><a href="about.html" style="color: #fff;">About</a></li>
-                        <li><a href="service.html" style="color: #fff;">Services</a></li>
-                        <li><a href="gallery.html" style="color: #fff;">Gallery</a></li>
-                        <li><a href="contact.html" style="color: #fff;">Contact Us</a></li>
-                    </ul>
+
+                <!-- 2. Employee Transport -->
+                <div class="gallery-card-wrapper" data-category="employee">
+                    <div class="gallery-card" onclick="openPremiumLightbox(1)">
+                        <img src="newimages/hero2.png" alt="Employee Transportation">
+                        <div class="gallery-card-overlay">
+                            <span>Employee Transport</span>
+                            <h4>Punctual Staff Commute</h4>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-3 info_news">
+
+                <!-- 3. Rental -->
+                <div class="gallery-card-wrapper" data-category="rental">
+                    <div class="gallery-card" onclick="openPremiumLightbox(2)">
+                        <img src="newimages/hero3.png" alt="Car Rental Excellence">
+                        <div class="gallery-card-overlay">
+                            <span>Car Rental</span>
+                            <h4>Executive Rental Solutions</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Tours -->
+                <div class="gallery-card-wrapper" data-category="tours">
+                    <div class="gallery-card" onclick="openPremiumLightbox(3)">
+                        <img src="newimages/hero4.png" alt="Tours and Travels">
+                        <div class="gallery-card-overlay">
+                            <span>Tours & Travels</span>
+                            <h4>Memorable Travel Journeys</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Employee Detail -->
+                <div class="gallery-card-wrapper" data-category="employee">
+                    <div class="gallery-card" onclick="openPremiumLightbox(4)">
+                        <img src="newimages/employeetransportation.png" alt="Corporate Fleet">
+                        <div class="gallery-card-overlay">
+                            <span>Employee Transport</span>
+                            <h4>Large Capacity Fleet</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Rental Detail -->
+                <div class="gallery-card-wrapper" data-category="rental">
+                    <div class="gallery-card" onclick="openPremiumLightbox(5)">
+                        <img src="newimages/carrental.png" alt="Rental Car">
+                        <div class="gallery-card-overlay">
+                            <span>Car Rental</span>
+                            <h4>Well Maintained Sedans</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Tours Detail -->
+                <div class="gallery-card-wrapper" data-category="tours">
+                    <div class="gallery-card" onclick="openPremiumLightbox(6)">
+                        <img src="newimages/tour&travels.png" alt="Travel Experiences">
+                        <div class="gallery-card-overlay">
+                            <span>Tours & Travels</span>
+                            <h4>Exploring New Horizons</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Operations -->
+                <div class="gallery-card-wrapper" data-category="fleet">
+                    <div class="gallery-card" onclick="openPremiumLightbox(7)">
+                        <img src="newimages/operationprocedure.png" alt="Maintenance and Operations">
+                        <div class="gallery-card-overlay">
+                            <span>Operations</span>
+                            <h4>Excellence in Maintenance</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9-16. New Gallery Images -->
+                <div class="gallery-card-wrapper" data-category="fleet">
+                    <div class="gallery-card" onclick="openPremiumLightbox(8)">
+                        <img src="newimages/gallery/g1.png" alt="Srikara Fleet G1">
+                        <div class="gallery-card-overlay">
+                            <span>Our Fleet</span>
+                            <h4>Fleet Excellence g1</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card-wrapper" data-category="employee">
+                    <div class="gallery-card" onclick="openPremiumLightbox(9)">
+                        <img src="newimages/gallery/g2.png" alt="Employee Transport G2">
+                        <div class="gallery-card-overlay">
+                            <span>Employee Transport</span>
+                            <h4>Corporate Route G2</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card-wrapper" data-category="employee">
+                    <div class="gallery-card" onclick="openPremiumLightbox(10)">
+                        <img src="newimages/gallery/g3.png" alt="Staff Commute G3">
+                        <div class="gallery-card-overlay">
+                            <span>Employee Transport</span>
+                            <h4>Timely Shuttle G3</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card-wrapper" data-category="rental">
+                    <div class="gallery-card" onclick="openPremiumLightbox(11)">
+                        <img src="newimages/gallery/g4.png" alt="Luxury Rental G4">
+                        <div class="gallery-card-overlay">
+                            <span>Car Rental</span>
+                            <h4>Premium Comfort G4</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card-wrapper" data-category="rental">
+                    <div class="gallery-card" onclick="openPremiumLightbox(12)">
+                        <img src="newimages/gallery/g5.png" alt="Rental Service G5">
+                        <div class="gallery-card-overlay">
+                            <span>Car Rental</span>
+                            <h4>Flexible Booking G5</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card-wrapper" data-category="tours">
+                    <div class="gallery-card" onclick="openPremiumLightbox(13)">
+                        <img src="newimages/gallery/g6.png" alt="Travel G6">
+                        <div class="gallery-card-overlay">
+                            <span>Tours & Travels</span>
+                            <h4>Group Adventures G6</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card-wrapper" data-category="tours">
+                    <div class="gallery-card" onclick="openPremiumLightbox(14)">
+                        <img src="newimages/gallery/g7.png" alt="Tour G7">
+                        <div class="gallery-card-overlay">
+                            <span>Tours & Travels</span>
+                            <h4>Scenic Routes G7</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card-wrapper" data-category="tours">
+                    <div class="gallery-card" onclick="openPremiumLightbox(15)">
+                        <img src="newimages/gallery/g8.png" alt="Quality Travel G8">
+                        <div class="gallery-card-overlay">
+                            <span>Tours & Travels</span>
+                            <h4>Quality Travel G8</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- info section -->
+    <section class="info_section">
+        <div class="container">
+            <div class="row mb-3 pb-4">
+                <div class="col-md-3 info_logo">
+                    <div class="logo-box">
+                        <img src="newimages/logo.png" alt="Srikara Logistics" style="max-width: 160px;">
+                    </div>
+                    <p>Srikara Logistics takes pride in being one of the best in Employee Transportation, Car Rentals
+                        and Tour & Travels.</p>
+                    <div class="info_social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3 info_address">
                     <h5>Address</h5>
-                    <p>
-                        Hyderabad, Telangana, India
-                    </p>
+                    <p>Plot no 112, TNGOS Colony, My Home Vihanga Road, behind Q-city, Nankramguda.</p>
+                    <p>Mobile: 8897925656 | 7799701666</p>
+                    <p><a href="mailto:srikaralogistics02@gmail.com">srikaralogistics02@gmail.com</a></p>
+                </div>
+                <div class="col-md-3 info_links">
+                    <div class="info_nav">
+                        <nav>
+                            <ul>
+                                <h5>Links</h5>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="service.html">Services</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
                 <div class="col-md-3 info_news">
-                    <h5>Contact</h5>
-                    <p>
-                        <i class="fa fa-phone"></i> 8897925656 | 7799701666<br>
-                        <i class="fa fa-envelope"></i> srikaralogistics02@gmail.com
-                    </p>
+                    <h5>Newsletter</h5>
+                    <form action="">
+                        <div><input type="text" placeholder="Your Name"></div>
+                        <div><input type="email" placeholder="Email"></div>
+                        <div class="d-flex justify-content-end">
+                            <button type="submit">Subscribe</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -326,34 +603,99 @@
                     class="bubble"></span><span class="bubble"></span><span class="bubble"></span><span
                     class="bubble"></span></a></p>
     </section>
-    <!-- footer section -->
+
+    <!-- Premium Lightbox -->
+    <div class="premium-lightbox" id="premiumLightbox">
+        <span class="lightbox-close" onclick="closePremiumLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <div class="lightbox-img-wrapper">
+                <img src="" alt="Gallery Image" id="lightboxActiveImg">
+            </div>
+            <div class="lightbox-nav">
+                <div class="nav-btn prev" onclick="changeLightboxImg(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="nav-btn next" onclick="changeLightboxImg(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="lightbox-caption">
+                <h3 id="lightboxTitle">Image Title</h3>
+                <p id="lightboxCat">Category</p>
+            </div>
+        </div>
+    </div>
 
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
 
-    <!-- Lightbox -->
-    <div class="gallery-lightbox" id="galleryLightbox" onclick="closeLightbox()">
-        <span class="close-btn">&times;</span>
-        <img src="" alt="Gallery Image" id="lightboxImg">
-    </div>
-
     <script>
-        function openLightbox(el) {
-            var src = el.querySelector('img').src;
-            document.getElementById('lightboxImg').src = src;
-            document.getElementById('galleryLightbox').classList.add('active');
+        // Gallery Data
+        const galleryItems = Array.from(document.querySelectorAll('.gallery-card')).map(card => ({
+            src: card.querySelector('img').src,
+            title: card.querySelector('h4').textContent,
+            category: card.querySelector('span').textContent
+        }));
+
+        let currentImgIndex = 0;
+
+        function openPremiumLightbox(index) {
+            currentImgIndex = index;
+            updateLightboxContent();
+            document.getElementById('premiumLightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
         }
 
-        function closeLightbox() {
-            document.getElementById('galleryLightbox').classList.remove('active');
+        function closePremiumLightbox() {
+            document.getElementById('premiumLightbox').classList.remove('active');
+            document.body.style.overflow = 'auto';
         }
 
-        // Close lightbox on Escape key
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') closeLightbox();
+        function changeLightboxImg(dir) {
+            currentImgIndex += dir;
+            if (currentImgIndex < 0) currentImgIndex = galleryItems.length - 1;
+            if (currentImgIndex >= galleryItems.length) currentImgIndex = 0;
+            updateLightboxContent();
+        }
+
+        function updateLightboxContent() {
+            const item = galleryItems[currentImgIndex];
+            document.getElementById('lightboxActiveImg').src = item.src;
+            document.getElementById('lightboxTitle').textContent = item.title;
+            document.getElementById('lightboxCat').textContent = item.category;
+        }
+
+        // Filtering Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.gallery-card-wrapper');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add to clicked
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+
+                cards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.classList.remove('hide');
+                    } else {
+                        card.classList.add('hide');
+                    }
+                });
+            });
         });
 
-        // Topbar auto-hide
+        // Close on escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closePremiumLightbox();
+            if (e.key === 'ArrowLeft') changeLightboxImg(-1);
+            if (e.key === 'ArrowRight') changeLightboxImg(1);
+        });
+
+        // Topbar logic
         (function () {
             var topbar = document.querySelector('.header_topbar');
             var header = document.querySelector('.header_section');
