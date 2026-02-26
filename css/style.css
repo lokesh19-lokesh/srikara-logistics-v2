@@ -539,30 +539,40 @@ a:focus {
   width: 20px;
 }
 
-.slider_section .carousel-indicators {
-  position: absolute;
+.slider_section .carousel-control-prev,
+.slider_section .carousel-control-next {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  color: #007FFF;
+  border: 1px solid rgba(0, 127, 255, 0.3);
+  border-radius: 50%;
   top: 50%;
-  left: -10%;
-  bottom: auto;
-  right: auto;
-  flex-direction: column;
   transform: translateY(-50%);
-}
-
-.slider_section .carousel-indicators li {
-  width: 30px;
-  height: 4px;
-  background-color: rgba(0, 127, 255, 0.3);
-  margin: 8px 0;
-  border: none;
-  opacity: 1;
-  border-radius: 2px;
+  opacity: 0.7;
   transition: all 0.3s ease;
+  z-index: 10;
 }
 
-.slider_section .carousel-indicators .active {
-  background-color: #005555;
-  width: 45px;
+.slider_section .carousel-control-prev {
+  left: 20px;
+}
+
+.slider_section .carousel-control-next {
+  right: 20px;
+}
+
+.slider_section .carousel-control-prev:hover,
+.slider_section .carousel-control-next:hover {
+  background-color: rgba(0, 127, 255, 0.1);
+  opacity: 1;
+  color: #007FFF;
+  border-color: #007FFF;
+}
+
+.slider_section .carousel-control-prev i,
+.slider_section .carousel-control-next i {
+  font-size: 18px;
 }
 
 
