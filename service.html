@@ -8,11 +8,12 @@
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
+  <meta name="keywords" content="employee transportation, car rental, tours travels, hyderabad logistics" />
+  <meta name="description"
+    content="Srikara Logistics offers Employee Transportation, Car Rental, and Tours & Travels services in Hyderabad." />
   <meta name="author" content="" />
 
-  <title>Transportz</title>
+  <title>Srikara Logistics | Our Services</title>
 
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css"
@@ -30,6 +31,168 @@
   <link href="css/responsive.css" rel="stylesheet" />
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* Services Page Styles */
+    .services-hero {
+      padding: 60px 0 40px;
+      text-align: center;
+    }
+
+    .service-card {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      margin-bottom: 30px;
+      background: #fff;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-card .card-img {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+    }
+
+    .service-card .card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+
+    .service-card:hover .card-img img {
+      transform: scale(1.05);
+    }
+
+    .service-card .card-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(135deg, #005555, #007F7F);
+      color: #fff;
+      padding: 10px 25px;
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .service-card .card-body-custom {
+      padding: 25px;
+    }
+
+    .service-card .card-body-custom p {
+      color: #555;
+      line-height: 1.7;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    /* Service Detail Sections */
+    .service-detail-section {
+      padding: 70px 0;
+    }
+
+    .service-detail-section.alt-bg {
+      background: #f5f9f9;
+    }
+
+    .service-detail-section h3 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #005555;
+      margin-bottom: 20px;
+    }
+
+    .service-detail-section .service-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .service-detail-section p {
+      color: #555;
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .service-detail-section .detail-img {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-detail-section .detail-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .feature-list li {
+      padding: 8px 0;
+      color: #444;
+      font-size: 15px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .feature-list li i {
+      color: #007FFF;
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #005555, #007F7F);
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+      margin-top: 15px;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 85, 85, 0.3);
+      color: #fff;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .service-detail-section {
+        padding: 40px 0;
+      }
+
+      .service-detail-section h3 {
+        font-size: 22px;
+      }
+
+      .service-card .card-img {
+        height: 180px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -77,90 +240,209 @@
   <!-- end header section -->
 
 
-
-  <!-- service section -->
-  <section class="service_section layout_padding">
+  <!-- Services Hero -->
+  <section class="services-hero">
     <div class="container">
-      <div class="d-flex justify-content-center">
-        <h2 class="heading_style">
-          Our Services
-        </h2>
-      </div>
-      <div class="row layout_padding2-top">
-        <div class="col-md-4">
-          <div class="service_img-box s-b-1">
-            <img src="images/service-1.jpg" alt="">
-            <div class="d-flex">
-              <h3>
-                CARGO
+      <h2 class="heading_style">Our Services</h2>
+      <p style="color: #666; max-width: 700px; margin: 15px auto 0; font-size: 16px; line-height: 1.7;">
+        Srikara Logistics offers comprehensive transportation solutions tailored to meet diverse client needs across
+        Hyderabad and beyond.
+      </p>
+    </div>
+  </section>
 
-              </h3>
+  <!-- Service Cards Overview -->
+  <section style="padding: 0 0 40px;">
+    <div class="container">
+      <div class="row">
+        <!-- Employee Transportation Card -->
+        <div class="col-md-4">
+          <a href="#employee-transport" style="text-decoration: none;">
+            <div class="service-card">
+              <div class="card-img">
+                <img src="newimages/employeetransportation.png" alt="Employee Transportation Service">
+                <div class="card-label">Employee Transportation</div>
+              </div>
+              <div class="card-body-custom">
+                <p>Srikara Logistics is the most trusted and reliable name in the travel business offering advanced cab
+                  rental and employee transportation services in Hyderabad.</p>
+              </div>
             </div>
-          </div>
-          <div class="service-detail">
-            <p>
-              aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-              dolore eu fugiat nulla pariatur.Excepteur
-            </p>
-            <div class="d-flex justify-content-end">
-              <a href="" class="service-btn">
-                See More
-              </a>
-            </div>
-          </div>
+          </a>
         </div>
+        <!-- Car Rental Card -->
         <div class="col-md-4">
-          <div class="service_img-box s-b-2">
-            <img src="images/service-2.jpg" alt="">
-            <div class="d-flex">
-              <h3>
-                LOGISTIC SERVICE
-
-
-              </h3>
+          <a href="#car-rental" style="text-decoration: none;">
+            <div class="service-card">
+              <div class="card-img">
+                <img src="newimages/carrental.png" alt="Car Rental Service">
+                <div class="card-label">Car Rental</div>
+              </div>
+              <div class="card-body-custom">
+                <p>We continually strive to offer the best of services – both in terms of man and machine, to our
+                  clients, ensuring comfortable and safe car rental experiences.</p>
+              </div>
             </div>
-          </div>
-          <div class="service-detail">
-            <p>
-              aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-              dolore eu fugiat nulla pariatur.Excepteur
-            </p>
-            <div class="d-flex justify-content-end">
-              <a href="" class="service-btn">
-                See More
-              </a>
-            </div>
-          </div>
+          </a>
         </div>
+        <!-- Tours & Travels Card -->
         <div class="col-md-4">
-          <div class="service_img-box s-b-3">
-            <img src="images/service-3.jpg" alt="">
-            <div class="d-flex">
-              <h3>
-                STORAGE
-
-
-              </h3>
+          <a href="#tours-travels" style="text-decoration: none;">
+            <div class="service-card">
+              <div class="card-img">
+                <img src="newimages/tour&travels.png" alt="Tours and Travels Service">
+                <div class="card-label">Tour &amp; Travels</div>
+              </div>
+              <div class="card-body-custom">
+                <p>Our years of experience has enabled us to fine tune our services to suit the need of every type of
+                  customer, providing comprehensive Tours &amp; Travels management.</p>
+              </div>
             </div>
-          </div>
-          <div class="service-detail">
-            <p>
-              aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-              dolore eu fugiat nulla pariatur.Excepteur
-            </p>
-            <div class="d-flex justify-content-end">
-              <a href="" class="service-btn">
-                See More
-              </a>
-            </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
   </section>
-  <!-- end service section -->
 
 
+  <!-- ===== Detailed Service Sections ===== -->
+
+  <!-- 1. Employee Transportation Detail -->
+  <section class="service-detail-section alt-bg" id="employee-transport">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="detail-img">
+            <img src="newimages/employeetransportation.png" alt="Employee Transportation Fleet">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="service-icon" style="background: rgba(0,85,85,0.1);">
+            <i class="fas fa-bus" style="color: #005555;"></i>
+          </div>
+          <h3>Employee Transportation</h3>
+          <p>
+            Srikara Logistics is the most trusted and reliable name in the employee transportation business in
+            Hyderabad. We specialize in providing safe, punctual, and organised cab services for corporate workforces,
+            ensuring employees reach their workplace comfortably and on time.
+          </p>
+          <p>
+            Our advanced fleet management system, powered by GPS tracking and real-time monitoring, ensures complete
+            transparency and accountability for every trip. With a dedicated operations team working round-the-clock, we
+            guarantee seamless service with zero downtime.
+          </p>
+          <ul class="feature-list">
+            <li><i class="fas fa-check-circle"></i> GPS-enabled vehicles with real-time tracking</li>
+            <li><i class="fas fa-check-circle"></i> Professionally trained and verified drivers</li>
+            <li><i class="fas fa-check-circle"></i> 24/7 operations control room</li>
+            <li><i class="fas fa-check-circle"></i> Route optimization for maximum efficiency</li>
+            <li><i class="fas fa-check-circle"></i> Backup vehicle arrangement within stipulated timelines</li>
+            <li><i class="fas fa-check-circle"></i> Dedicated relationship manager for each client</li>
+          </ul>
+          <a href="contact.html" class="cta-btn">Get a Quote <i class="fas fa-arrow-right"
+              style="margin-left: 8px;"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 2. Car Rental Detail -->
+  <section class="service-detail-section" id="car-rental">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+          <div class="detail-img">
+            <img src="newimages/carrental.png" alt="Car Rental Fleet">
+          </div>
+        </div>
+        <div class="col-md-6 order-md-1">
+          <div class="service-icon" style="background: rgba(0,127,255,0.1);">
+            <i class="fas fa-car" style="color: #007FFF;"></i>
+          </div>
+          <h3>Car Rental</h3>
+          <p>
+            We continually strive to offer the best of services – both in terms of man and machine – to our clients.
+            Whether you need a car for a business meeting, airport transfer, outstation trip, or daily commuting,
+            Srikara
+            Logistics has the perfect vehicle for your needs.
+          </p>
+          <p>
+            Our well-maintained fleet includes sedans, SUVs, and luxury vehicles, all driven by courteous and
+            experienced chauffeurs. We ensure every ride is comfortable, safe, and punctual, making us the preferred car
+            rental partner for individuals and businesses in Hyderabad.
+          </p>
+          <ul class="feature-list">
+            <li><i class="fas fa-check-circle"></i> Wide range of vehicles: sedans, SUVs, and luxury cars</li>
+            <li><i class="fas fa-check-circle"></i> Airport pickups and drop services</li>
+            <li><i class="fas fa-check-circle"></i> Outstation and local trip packages</li>
+            <li><i class="fas fa-check-circle"></i> Well-maintained and sanitized vehicles</li>
+            <li><i class="fas fa-check-circle"></i> Transparent pricing with no hidden charges</li>
+            <li><i class="fas fa-check-circle"></i> Flexible booking — hourly, daily, and monthly plans</li>
+          </ul>
+          <a href="contact.html" class="cta-btn">Book Now <i class="fas fa-arrow-right"
+              style="margin-left: 8px;"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 3. Tours & Travels Detail -->
+  <section class="service-detail-section alt-bg" id="tours-travels">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="detail-img">
+            <img src="newimages/tour&travels.png" alt="Tours and Travels">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="service-icon" style="background: rgba(0,85,85,0.1);">
+            <i class="fas fa-globe-asia" style="color: #005555;"></i>
+          </div>
+          <h3>Tours &amp; Travels</h3>
+          <p>
+            Our years of experience have enabled us to fine-tune our services to suit the needs of every type of
+            customer. Whether it's a family vacation, corporate retreat, pilgrimage tour, or adventure getaway, Srikara
+            Logistics designs memorable travel experiences tailored just for you.
+          </p>
+          <p>
+            We offer comprehensive tour management including vehicle arrangement, experienced drivers, customized
+            itineraries, and 24/7 on-trip support. Our deep local knowledge and strong network across popular
+            destinations ensure you have a hassle-free and enjoyable journey.
+          </p>
+          <ul class="feature-list">
+            <li><i class="fas fa-check-circle"></i> Customized tour packages for families and corporates</li>
+            <li><i class="fas fa-check-circle"></i> Pilgrimage tours across South India</li>
+            <li><i class="fas fa-check-circle"></i> Experienced drivers with local knowledge</li>
+            <li><i class="fas fa-check-circle"></i> Comfortable AC vehicles for long journeys</li>
+            <li><i class="fas fa-check-circle"></i> End-to-end trip planning and coordination</li>
+            <li><i class="fas fa-check-circle"></i> Group bookings with special rates</li>
+          </ul>
+          <a href="contact.html" class="cta-btn">Plan Your Trip <i class="fas fa-arrow-right"
+              style="margin-left: 8px;"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA Banner -->
+  <section
+    style="padding: 60px 0; background: linear-gradient(135deg, #005555 0%, #003838 100%); text-align: center; color: #fff;">
+    <div class="container">
+      <h2 style="font-size: 30px; font-weight: 700; margin-bottom: 15px;">Ready to Experience Our Services?</h2>
+      <p style="font-size: 16px; opacity: 0.85; max-width: 600px; margin: 0 auto 25px;">
+        Contact us today for a free consultation and customized quote. Let Srikara Logistics be your trusted
+        transportation partner.
+      </p>
+      <a href="contact.html"
+        style="display: inline-block; background: #007FFF; color: #fff; padding: 14px 40px; border-radius: 6px; font-weight: 600; font-size: 16px; text-decoration: none; transition: background 0.3s;">
+        <i class="fas fa-phone" style="margin-right: 8px;"></i> Contact Us Now
+      </a>
+    </div>
+  </section>
 
 
   <!-- info section -->
@@ -227,8 +509,6 @@
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
-
-
 
   <script>
     (function () {
