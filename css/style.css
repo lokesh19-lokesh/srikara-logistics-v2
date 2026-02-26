@@ -828,6 +828,7 @@ a:focus {
 
 /* info section */
 .info_section {
+  margin-top: 60px;
   padding-top: 150px;
   padding-bottom: 1px;
   color: #fff;
