@@ -631,22 +631,48 @@ a:focus {
 
 /* service section */
 
-/* shop section */
+/* shop section - Total Number of Vehicles */
 
-.shop_section {}
+.shop_section {
+  background-color: #fff;
+}
 
 .shop_section .row {
-  margin-top: 100px;
+  margin-top: 30px;
+}
+
+.fleet-info-card {
   background-color: #005555;
+  border-radius: 12px;
+  padding: 40px 30px;
+  color: #fff;
 }
 
-.shop-detail {
-  padding: 50px;
+.fleet-info-card .fleet-size {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
 }
 
-.shop-detail h5 {
+.fleet-info-card .fleet-size span {
   color: #007FFF;
-  font-size: 22px;
+  font-size: 36px;
+}
+
+.fleet-info-card .fleet-breakdown {
+  font-size: 18px;
+  font-weight: 600;
+  color: #a0e0d0;
+  margin-bottom: 15px;
+}
+
+.fleet-info-card .fleet-desc {
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .shop-detail p {
