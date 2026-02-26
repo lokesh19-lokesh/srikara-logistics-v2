@@ -931,6 +931,36 @@
       }, { passive: true });
     })();
   </script>
+  <!-- Floating Buttons -->
+  <a href="https://wa.me/918897925656" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <div class="scroll-to-top" id="scrollTop">
+    <i class="fa fa-chevron-up"></i>
+  </div>
+
+  <script>
+    // Scroll to Top Logic
+    (function () {
+      var scrollTopBtn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 300) {
+          scrollTopBtn.classList.add('show');
+        } else {
+          scrollTopBtn.classList.remove('show');
+        }
+      }, { passive: true });
+
+      scrollTopBtn.addEventListener('click', function () {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    })();
+  </script>
 </body>
+
 
 </html>
