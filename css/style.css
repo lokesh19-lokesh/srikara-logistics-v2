@@ -415,15 +415,10 @@ a:focus {
   color: #005555;
 }
 
-.custom_nav-container .navbar-toggler {}
+.custom_nav-container .navbar-toggler {
+  outline: none;
+}
 
-.custom_nav-container .navbar-toggler .navbar-toggler-icon {}
-
-.custom_nav-container .nav_search-btn {}
-
-.navbar {}
-
-.nav-link:hover {}
 
 .navbar-brand,
 .navbar-brand:hover {
@@ -1119,19 +1114,123 @@ a:focus {
 
 @keyframes bubbleFloat {
   0% {
-    opacity: 0.8;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
+    opacity: 0;
   }
 
-  50% {
-    opacity: 0.6;
+  20% {
+    opacity: 1;
   }
 
   100% {
+    transform: translateY(-50px);
     opacity: 0;
-    transform: translateY(-40px) scale(0.3);
   }
 }
+
+/* ============================================
+   SAFETY COMMITMENT SECTION
+   ============================================ */
+.safety_section {
+  background-color: #f8fcfc;
+  position: relative;
+}
+
+.safety_card {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  height: 100%;
+  box-shadow: 0 10px 30px rgba(0, 85, 85, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 4px solid transparent;
+}
+
+.safety_card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 45px rgba(0, 85, 85, 0.1);
+}
+
+.safety_card.card_general {
+  border-color: #005555;
+}
+
+.safety_card.card_employee {
+  border-color: #007FFF;
+}
+
+.safety_card.card_road {
+  border-color: #003838;
+}
+
+.safety_icon_box {
+  width: 70px;
+  height: 70px;
+  background: rgba(0, 85, 85, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.safety_icon_box i {
+  font-size: 30px;
+  color: #005555;
+}
+
+.card_employee .safety_icon_box {
+  background: rgba(0, 127, 255, 0.1);
+}
+
+.card_employee .safety_icon_box i {
+  color: #007FFF;
+}
+
+.safety_card h4 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  color: #005555;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.safety_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.safety_list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  color: #444;
+  font-size: 15px;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.safety_list li::before {
+  content: "\f10d";
+  /* quote-left */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 12px;
+  color: #007FFF;
+  opacity: 0.6;
+}
+
+@media (max-width: 991px) {
+  .safety_card {
+    margin-bottom: 30px;
+    padding: 30px 20px;
+  }
+}
+
 
 /* end footer section*/
 
