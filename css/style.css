@@ -1,6 +1,6 @@
 html,
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   background-color: #fff;
   overflow-x: hidden;
   max-width: 100%;
@@ -13,7 +13,7 @@ h4,
 h5,
 h6,
 .heading_style {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .layout_padding {
@@ -357,7 +357,7 @@ h6,
   font-size: 22px;
   font-weight: bold;
   color: #005555;
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .header_section .header_container {
@@ -924,7 +924,7 @@ a:focus {
   background-size: 100% 101%;
 
   background-repeat: no-repeat;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .info_section h5 {
@@ -1023,7 +1023,7 @@ a:focus {
 .footer_section {
   background-color: #007F7F;
   padding: 20px 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .footer_section p {
@@ -1195,7 +1195,7 @@ a:focus {
 }
 
 .safety_card h4 {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 700;
   color: #005555;
   margin-bottom: 20px;
@@ -1403,7 +1403,7 @@ a:focus {
 }
 
 .drivers_content_box h2 {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   color: #005555;
   font-weight: 700;
   margin-bottom: 25px;
@@ -1463,7 +1463,7 @@ a:focus {
 }
 
 .driver_img_overlay span {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 600;
   font-size: 18px;
 }
