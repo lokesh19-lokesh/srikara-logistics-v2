@@ -730,38 +730,27 @@ a:focus {
   margin-top: 30px;
 }
 
-.fleet-info-card {
-  background-color: #005555;
-  border-radius: 12px;
-  padding: 40px 30px;
-  color: #fff;
+/* ev section styles */
+.ev_section {
+  background-color: #f8fcfc;
+  border-radius: 15px;
+  margin: 40px 0;
 }
 
-.fleet-info-card .fleet-size {
-  font-size: 28px;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 10px;
+.ev-detail h2 {
+  color: #005555;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
-.fleet-info-card .fleet-size span {
-  color: #007FFF;
-  font-size: 36px;
+.ev_img-box img {
+  border-radius: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.fleet-info-card .fleet-breakdown {
-  font-size: 18px;
-  font-weight: 600;
-  color: #a0e0d0;
-  margin-bottom: 15px;
-}
-
-.fleet-info-card .fleet-desc {
-  font-size: 15px;
-  color: #ccc;
-  line-height: 1.6;
-  max-width: 600px;
-  margin: 0 auto;
+.ev_img-box img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 40px rgba(0, 85, 85, 0.2) !important;
 }
 
 .shop-detail p {
