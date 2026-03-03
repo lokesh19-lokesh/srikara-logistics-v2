@@ -163,20 +163,9 @@
         }
 
         .gallery-card-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(0, 56, 56, 0.9) 0%, rgba(0, 85, 85, 0.4) 50%, transparent 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 25px;
-            opacity: 0;
-            transition: opacity 0.4s ease;
+            display: none !important;
         }
 
-        .gallery-card:hover .gallery-card-overlay {
-            opacity: 1;
-        }
 
         .gallery-card-overlay h4 {
             color: #fff;
@@ -246,13 +235,15 @@
         }
 
         .lightbox-close {
-            position: absolute;
-            top: -50px;
-            right: 0;
+            position: fixed;
+            top: 25px;
+            right: 40px;
             color: #fff;
-            font-size: 32px;
+            font-size: 50px;
+            font-weight: 300;
             cursor: pointer;
-            transition: color 0.3s;
+            transition: color 0.3s, transform 0.3s;
+            z-index: 10000;
         }
 
         .lightbox-close:hover {
@@ -419,7 +410,7 @@
                 <!-- 1. Fleet -->
                 <div class="gallery-card-wrapper" data-category="fleet">
                     <div class="gallery-card" onclick="openPremiumLightbox(0)">
-                        <img src="newimages/hero1.png" alt="Premium Fleet Vehicle">
+                        <img src="newimages/gallery/gg1.png" alt="Premium Fleet Vehicle">
                         <div class="gallery-card-overlay">
                             <span>Our Fleet</span>
                             <h4>Premium Sedan Services</h4>
@@ -507,7 +498,7 @@
                 <!-- 9-16. New Gallery Images -->
                 <div class="gallery-card-wrapper" data-category="fleet">
                     <div class="gallery-card" onclick="openPremiumLightbox(8)">
-                        <img src="newimages/gallery/g1.png" alt="Srikara Fleet G1">
+                        <img src="newimages/gallery/gg2.png" alt="Srikara Fleet G1">
                         <div class="gallery-card-overlay">
                             <span>Our Fleet</span>
                             <h4>Fleet Excellence g1</h4>
