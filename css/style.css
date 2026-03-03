@@ -699,6 +699,14 @@ a:focus {
   background-image: url(../images/hbg-3.png);
 }
 
+.s-b-4 h3 {
+  background-image: url(../images/hbg.png);
+}
+
+.s-b-5 h3 {
+  background-image: url(../images/hbg-2.png);
+}
+
 .service_img-box img {
   width: 100%;
 }
