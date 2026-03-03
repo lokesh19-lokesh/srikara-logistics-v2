@@ -1301,11 +1301,11 @@ a:focus {
 
 @media (max-width: 768px) {
   .partner_item {
-    padding: 0 25px;
+    padding: 0 15px;
   }
 
   .partner_item img {
-    max-height: 60px;
+    max-height: 100px;
   }
 
   .partner_slider {
