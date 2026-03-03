@@ -1,9 +1,19 @@
 html,
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: #fff;
   overflow-x: hidden;
   max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading_style {
+  font-family: 'Outfit', sans-serif;
 }
 
 .layout_padding {
@@ -347,7 +357,7 @@ body {
   font-size: 22px;
   font-weight: bold;
   color: #005555;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Outfit', sans-serif;
 }
 
 .header_section .header_container {
@@ -914,7 +924,7 @@ a:focus {
   background-size: 100% 101%;
 
   background-repeat: no-repeat;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .info_section h5 {
@@ -1013,7 +1023,7 @@ a:focus {
 .footer_section {
   background-color: #007F7F;
   padding: 20px 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .footer_section p {
