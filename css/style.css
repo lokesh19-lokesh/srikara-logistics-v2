@@ -1311,6 +1311,10 @@ a:focus {
   .partner_slider {
     animation-duration: 25s;
   }
+
+  .company_img-box img {
+    margin-top: 30px;
+  }
 }
 
 /* ============================================
